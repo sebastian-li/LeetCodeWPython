@@ -20,7 +20,7 @@ class Solution:
         #return(nodeList==list(reversed(nodeList)))
         return(nodeList==nodeList[::-1]) # this is much faster
         
-if __name__ == '__main__':
-    s = Solution()
-    s.isPalindrome([1,2,3,2,1])        
+#if __name__ == '__main__':
+#    s = Solution()
+#    s.isPalindrome(head)        
 
