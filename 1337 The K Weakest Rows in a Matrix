@@ -1,0 +1,18 @@
+#idea: create a table of 2 columns, 1 is number of soldiers and 2 is row number. Arrange them based on 1 and them 2, and output the first k rows.
+
+class Solution:
+    def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
+        
+        lenthColumn = [i.count(1) for i in mat]
+        idColumn = list(range(len(mat)))
+        
+        finalCol = list(zip(lenthColumn,idColumn))
+        
+        finalColSorted = sorted(finalCol,key=lambda x: (x[0],x[1]))
+        
+        def Extract(lst,k):
+            return [item[1] for item in lst[0:k]]
+        
+        return Extract(finalColSorted,k)
+        
+        
